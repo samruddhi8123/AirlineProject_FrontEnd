@@ -1,0 +1,23 @@
+<div class="card">
+    <h2 style="text-align: center;">user Login</h2>
+<form #loginForm="ngForm" (ngSubmit)="checkLogin(loginForm)">
+ 
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required [(ngModel)]="user.userName">
+ 
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required [(ngModel)]="user.userPassword">
+ 
+      <button type="submit">Login</button>
+      <!-- <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label> -->
+    </div>
+ 
+    <div class="container" style="background-color:#f1f1f1">
+        <a [routerLink]="['/registerLink']"><button type="button" class="registerbtn">Register</button></a>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
